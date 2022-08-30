@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "role.proto";
+
+option go_package = "github.com/recsys-infra/ps-lite/api";
+
+message Node {
+  Role role = 1 [
+    json_name = "Role"
+  ];
+  int32 id = 2 [
+    json_name = "Id"
+  ];
+  int32 custom_id = 3 [
+    json_name = "CustomId"
+  ];
+  string hostname = 4 [
+    json_name = "HostName"
+  ];
+  int32 port = 5 [
+    json_name = "Port"
+  ];
+  bool is_recovery = 6 [
+    json_name = "IsRecovery"
+  ];
+}

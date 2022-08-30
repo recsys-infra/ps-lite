@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "command.proto";
+import "node.proto";
+
+option go_package = "github.com/recsys-infra/ps-lite/api";
+
+message Control {
+  Command cmd = 1 [
+    json_name = "Cmd"
+  ];
+  repeated Node node = 2 [
+    json_name = "Node"
+  ];
+  int32 barrier_group = 3 [
+    json_name = "BarrierGroup"
+  ];
+  uint64 msg_signature = 4 [
+    json_name = "message_signature"
+  ];
+}

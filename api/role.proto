@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/recsys-infra/ps-lite/api";
+
+enum Role {
+  UNKNOWN = 0;
+  SERVER = 1;
+  WORKER = 2;
+  SCHEDULER = 3;
+}

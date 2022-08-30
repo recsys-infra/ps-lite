@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+import "control.proto";
+import "data_type.proto";
+
+option go_package = "github.com/recsys-infra/ps-lite/api";
+
+/**
+ * \brief meta info of a message
+ */
+message Meta {
+  int32 head = 1 [
+    json_name = "Head"
+  ];
+  int32 app_id = 2 [
+    json_name = "AppId"
+  ];
+  int32 custom_id = 3 [
+    json_name = "CustomId"
+  ];
+  int64 timestamp = 4 [
+    json_name = "Timestamp"
+  ];
+  int32 sender = 5 [
+    json_name = "Sender"
+  ];
+  int32 receiver = 6 [
+    json_name = "Receiver"
+  ];
+  bool request = 7 [
+    json_name = "Request"
+  ];
+  bool push = 8 [
+    json_name = "Push"
+  ];
+  bool pull = 9 [
+    json_name = "Pull"
+  ];
+  bool simple_app = 10 [
+    json_name = "SimpleApp"
+  ];
+  string body = 11 [
+    json_name = "Body"
+  ];
+  repeated DataType data_type = 12 [
+    json_name = "DataType"
+  ];
+  Control control = 13 [
+    json_name = "Control"
+  ];
+  int32 data_size = 14 [
+    json_name = "DataSize"
+  ];
+  int32 priority = 15 [
+    json_name = "Priority"
+  ];
+}

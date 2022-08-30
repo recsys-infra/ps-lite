@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "github.com/recsys-infra/ps-lite/api";
+
+enum Command {
+  EMPTY = 0;
+  TERMINATE = 1;
+  ADD_NODE = 2;
+  BARRIER = 3;
+  ACK = 4;
+  HEARTBEAT = 5;
+}
