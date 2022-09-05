@@ -48,7 +48,6 @@ func (v *Van) Start(customerId int) error {
 					return api.Role_SERVER
 				}
 			}()
-			// TODO(Huang Kai): try to align to GetIP and GetPort
 			ip, err := utils.GetAvailableIpV4()
 			if err != nil {
 				logrus.WithError(err).Error("failed to get avaliable ip address")
