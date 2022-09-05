@@ -11,8 +11,8 @@ message Node {
   int32 id = 2 [
     json_name = "Id"
   ];
-  int32 custom_id = 3 [
-    json_name = "CustomId"
+  int32 customer_id = 3 [
+    json_name = "CustomerId"
   ];
   string hostname = 4 [
     json_name = "HostName"
